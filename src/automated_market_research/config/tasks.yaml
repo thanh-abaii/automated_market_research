@@ -1,0 +1,25 @@
+# src/automated_market_research/config/tasks.yaml
+data_gathering_task:
+  description: >
+    Collect recent market trends, competitor information, and product data
+    for the specified product category.
+  expected_output: >
+    A raw dataset containing market information relevant to the product category.
+  agent: data_gatherer
+
+data_analysis_task:
+  description: >
+    Analyze the collected data to identify key trends, customer demographics,
+    pricing strategies, and competitive advantages.
+  expected_output: >
+    A summary of key findings and insights for the specified product category.
+  agent: analysis_agent
+
+report_generation_task:
+  description: >
+    Compile the findings into a structured market research report.
+    Include an introduction, detailed sections for each finding, and a conclusion.
+  expected_output: >
+    A markdown file containing a complete market research report.
+  agent: report_generator
+  output_file: output/market_research_report.md

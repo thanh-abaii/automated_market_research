@@ -1,0 +1,14 @@
+.env
+__pycache__/
+
+# Virtual Environment
+venv/
+.env/
+.venv/
+*.env
+
+# VSCode
+.vscode/
+
+# Cache
+search_cache.json

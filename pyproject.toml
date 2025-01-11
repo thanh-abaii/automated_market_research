@@ -1,0 +1,21 @@
+[project]
+name = "automated_market_research"
+version = "0.1.0"
+description = "automated-market-research using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<=3.13"
+
+dependencies = [
+     "crewai[tools]>=0.86.0,<1.0.0"
+]
+
+[project.scripts]
+automated_market_research = "automated_market_research.main:run"
+run_crew = "automated_market_research.main:run"
+train = "automated_market_research.main:train"
+replay = "automated_market_research.main:replay"
+test = "automated_market_research.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
