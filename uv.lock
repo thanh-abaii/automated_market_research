@@ -227,10 +227,14 @@ version = "0.1.0"
 source = { editable = "." }
 dependencies = [
     { name = "crewai", extra = ["tools"] },
+    { name = "exa-py" },
 ]
 
 [package.metadata]
-requires-dist = [{ name = "crewai", extras = ["tools"], specifier = ">=0.86.0,<1.0.0" }]
+requires-dist = [
+    { name = "crewai", extras = ["tools"], specifier = ">=0.86.0,<1.0.0" },
+    { name = "exa-py", specifier = ">=1.7.1" },
+]
 
 [[package]]
 name = "backoff"
@@ -515,7 +519,7 @@ name = "click"
 version = "8.1.8"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "colorama", marker = "platform_system == 'Windows'" },
+    { name = "colorama", marker = "sys_platform == 'win32'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/b9/2e/0090cbf739cee7d23781ad4b89a9894a41538e4fcf4c31dcdd705b78eb8b/click-8.1.8.tar.gz", hash = "sha256:ed53c9d8990d83c2a27deae68e4ee337473f6330c040a31d4225c9574d16096a", size = 226593 }
 wheels = [
@@ -797,6 +801,20 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/d3/38/af70d7ab1ae9d4da450eeec1fa3918940a5fafb9055e934af8d6eb0c2313/et_xmlfile-2.0.0.tar.gz", hash = "sha256:dab3f4764309081ce75662649be815c4c9081e88f0837825f90fd28317d4da54", size = 17234 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/c1/8b/5fe2cc11fee489817272089c4203e679c63b570a5aaeb18d852ae3cbba6a/et_xmlfile-2.0.0-py3-none-any.whl", hash = "sha256:7a91720bc756843502c3b7504c77b8fe44217c85c537d85037f0f536151b2caa", size = 18059 },
+]
+
+[[package]]
+name = "exa-py"
+version = "1.7.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "openai" },
+    { name = "requests" },
+    { name = "typing-extensions" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/b2/88/ae1fc467b55b45e8d34b429dea98da5c63c4599d1bf5ef4bd7279d588152/exa_py-1.7.1.tar.gz", hash = "sha256:d4912b66eed3f49bdc216d6dccfa93c745409d3cdb0bd6fd32f85ce5fd3ed54d", size = 10756 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/e3/76/9f81efcfd7def85d257a9579560a5c170c45de4b5e9df6653f5b75c298d1/exa_py-1.7.1-py3-none-any.whl", hash = "sha256:a7c6ebdd85c4114a3763644b99eeef80971082ebcd62f7713a20c31fd2ab0663", size = 10094 },
 ]
 
 [[package]]
@@ -2844,7 +2862,7 @@ name = "portalocker"
 version = "2.10.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "pywin32", marker = "platform_system == 'Windows'" },
+    { name = "pywin32", marker = "sys_platform == 'win32'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/ed/d3/c6c64067759e87af98cc668c1cc75171347d0f1577fab7ca3749134e3cd4/portalocker-2.10.1.tar.gz", hash = "sha256:ef1bf844e878ab08aee7e40184156e1151f228f103aa5c6bd0724cc330960f8f", size = 40891 }
 wheels = [
@@ -4110,7 +4128,7 @@ name = "tqdm"
 version = "4.67.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "colorama", marker = "platform_system == 'Windows'" },
+    { name = "colorama", marker = "sys_platform == 'win32'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/a8/4b/29b4ef32e036bb34e4ab51796dd745cdba7ed47ad142a9f4a1eb8e0c744d/tqdm-4.67.1.tar.gz", hash = "sha256:f8aef9c52c08c13a65f30ea34f4e5aac3fd1a34959879d7e59e63027286627f2", size = 169737 }
 wheels = [
