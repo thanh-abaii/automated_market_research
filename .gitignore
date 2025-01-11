@@ -10,5 +10,3 @@ venv/
 # VSCode
 .vscode/
 
-# Cache
-search_cache.json
